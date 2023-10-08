@@ -4,18 +4,14 @@ from typing import List, Tuple
 def get_neighbours(matrix: List[List[int]], row: int, col: int) -> List[int]:
     result = []
     if row - 1 >= 0:
-        neighbour_1 = matrix[row - 1][col]
-        result.append(neighbour_1)
-    if col + 1 < len(row):
-        neighbour_2 = matrix[row][col + 1]
-        result.append(neighbour_2)
+        result.append(matrix[row - 1][col])
+    if col + 1 < len(matrix[0]):
+        result.append(matrix[row][col + 1])
     if row + 1 < len(matrix):
-        neighbour_3 = matrix[row + 1][col]
-        result.append(neighbour_3)
+        result.append(matrix[row + 1][col])
     if col - 1 >= 0:
-        neighbour_4 = matrix[row][col - 1]
-        result.append(neighbour_4)
-    return result
+        result.append(matrix[row][col - 1])
+    return sorted(result)
 
 
 def read_input() -> Tuple[List[List[int]], int, int]:
