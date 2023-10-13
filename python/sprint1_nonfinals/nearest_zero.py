@@ -2,23 +2,23 @@ from typing import List
 
 
 def nearest_zero(arr: List[int]) -> List[int]:
-    result = []
+    result = [0] * len(arr)
+    left_zero = -1
     for i in range(len(arr)):
         if arr[i] == 0:
-            result.append(0)
-        else:
-            steps_right = float('inf')
-            steps_left = float('inf')
-            for r in range(i + 1, len(arr)):
-                if arr[r] == 0:
-                    steps_right = r - i
-                    break
-            for left in range(i - 1, -1, -1):
-                if arr[left] == 0:
-                    steps_left = i - left
-                    break
-            min_dist = min(steps_right, steps_left)
-            result.append(min_dist)
+            left_zero = i
+        if left_zero != -1:
+            result[i] = i - left_zero
+
+    right_zero = -1
+    for i in range(len(arr) - 1, -1, -1):
+        if arr[i] == 0:
+            right_zero = i
+        if right_zero != -1:
+            result[i] = (
+                min(result[i], right_zero - i)
+                if result[i] != 0 else right_zero - i
+            )
 
     return result
 
