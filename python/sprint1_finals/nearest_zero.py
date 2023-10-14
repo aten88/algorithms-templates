@@ -1,7 +1,10 @@
 from typing import List
 
+# id-посылки 92916328
+
 
 def nearest_zero(arr: List[int]) -> List[int]:
+    ''' Ищет расстояние до ближайшего 0. '''
     result = [0] * len(arr)
     left_zero = -1
     for i in range(len(arr)):
