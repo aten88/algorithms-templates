@@ -1,6 +1,7 @@
 from typing import List
 
-# id-посылки 93052164
+# id-посылки: 93183824
+
 
 def count_points(k, buttons):
     ''' Считает количество очков. '''
@@ -25,7 +26,6 @@ def read_input() -> List[int]:
     return k, buttons
 
 
-k, buttons = read_input()
-
-
-print(count_points(k, buttons))
+if __name__ == '__main__':
+    k, buttons = read_input()
+    print(count_points(k, buttons))
