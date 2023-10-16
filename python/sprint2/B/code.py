@@ -10,9 +10,9 @@ if LOCAL:
 
 
 def solution(node):
-    # Your code
-    # ヽ(´▽`)/
-    pass
+    while node is not None:
+        print(node.value)
+        node = node.next_item
 
 
 def test():
