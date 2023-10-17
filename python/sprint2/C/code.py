@@ -9,10 +9,21 @@ if LOCAL:
             self.next_item = next_item
 
 
-def solution(node, idx):
-    # Your code
-    # ヽ(´▽`)/
-    pass
+def solution(head, index):
+    if index == 0:
+        return head.next_item
+
+    current = head
+    for i in range(index-1):
+        if current is None:
+            return head
+        current = current.next_item
+
+    if current is None or current.next_item is None:
+        return head
+
+    current.next_item = current.next_item.next_item
+    return head
 
 
 def test():
