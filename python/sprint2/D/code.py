@@ -3,15 +3,21 @@ import os
 LOCAL = os.environ.get('REMOTE_JUDGE', 'false') != 'true'
 
 if LOCAL:
-    class Node:  
-        def __init__(self, value, next_item=None):  
-            self.value = value  
+    class Node:
+        def __init__(self, value, next_item=None):
+            self.value = value
             self.next_item = next_item
 
+
 def solution(node, elem):
-    # Your code
-    # ヽ(´▽`)/
-    pass
+    index = 0
+    while node:
+        if node.value == elem:
+            return index
+        node = node.next_item
+        index += 1
+    return -1
+
 
 def test():
     node3 = Node("node3", None)
