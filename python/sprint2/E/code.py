@@ -11,15 +11,14 @@ if LOCAL:
 
 
 def solution(node):
-    current = node
     new_head = None
 
-    while current:
-        temp = current.prev
-        current.prev = current.next
-        current.next = temp
-        new_head = current
-        current = current.prev
+    while node:
+        temp = node.prev
+        node.prev = node.next
+        node.next = temp
+        new_head = node
+        node = node.prev
     return new_head
 
 
