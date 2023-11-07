@@ -23,21 +23,3 @@ def half_array(arr):
 
 arr3 = [15, 7, 3, 15, 11, 9, 5, 18]
 print(half_array(arr3))
-
-
-a = [7, 8]
-b = [6, 10]
-
-result_a = []
-for i in range(a[0], a[1]):
-    result_a.append(i)
-
-result_b = []
-for j in range(b[0], b[1]):
-    result_b.append(j)
-
-a_string = ''.join(str(x) for x in result_a)
-b_string = ''.join(str(x) for x in result_b)
-
-if a_string in b_string:
-    print('Внутри диапазона')
