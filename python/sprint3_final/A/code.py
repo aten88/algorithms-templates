@@ -1,8 +1,8 @@
 def broken_search(nums, target) -> int:
     left = 0
-    right = (len(nums) - 1)  # =8
+    right = (len(nums) - 1)
     while left <= right:
-        mid = (left + right) // 2  # =4
+        mid = (left + right) // 2
         if nums[mid] == target:
             return mid
         if nums[left] <= nums[mid]:
@@ -18,10 +18,19 @@ def broken_search(nums, target) -> int:
     return -1
 
 
+def read_input():
+    len_array = int(input())
+    target = int(input())
+    array = list(map(int, input().split(' ')))
+    return len_array, target, array
+
+
 def test():
     arr = [19, 21, 100, 101, 1, 4, 5, 7, 12]
-    print(broken_search(arr, 100))
-    # assert broken_search(arr, 5) == 6
+    broken_search(arr, 100)
+    assert broken_search(arr, 5) == 6
+    len_arr, target, array = read_input()
+    print(broken_search(array, target))
 
 
 if __name__ == '__main__':
