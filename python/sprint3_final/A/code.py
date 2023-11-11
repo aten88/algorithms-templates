@@ -30,8 +30,8 @@ def test():
     broken_search(arr, 100)
     assert broken_search(arr, 5) == 6
     len_arr, target, array = read_input()
-    print(broken_search(array, target))
+    return broken_search(array, target)
 
 
 if __name__ == '__main__':
-    test()
+    print(test())
