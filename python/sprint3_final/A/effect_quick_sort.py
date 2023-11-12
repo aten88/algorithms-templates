@@ -1,4 +1,4 @@
-# Номер посылки 96954358
+# Номер посылки 96956536
 
 def custom_sort_key(item):
     ''' Задает порядок сравнения элементов. '''
@@ -23,12 +23,12 @@ def quick_sort(array):
 
 
 def read_input():
-    '''Метод чтения данных. '''
+    ''' Метод чтения данных. '''
     n = int(input())
-    members_list = []
-    for _ in range(n):
+    members_list = [None] * n
+    for i in range(n):
         member = input().strip().split()
-        members_list.append(member)
+        members_list[i] = member
     return n, members_list
 
 
