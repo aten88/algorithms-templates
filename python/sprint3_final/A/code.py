@@ -1,4 +1,5 @@
 def broken_search(nums, target) -> int:
+    ''' Метод нахождения элемента в смещенном массиве. '''
     left = 0
     right = (len(nums) - 1)
     while left <= right:
@@ -19,6 +20,7 @@ def broken_search(nums, target) -> int:
 
 
 def read_input():
+    ''' Метод чтения данных. '''
     len_array = int(input())
     target = int(input())
     array = list(map(int, input().split(' ')))
