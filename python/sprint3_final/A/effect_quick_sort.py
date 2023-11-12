@@ -1,3 +1,5 @@
+# Номер посылки 96954358
+
 def custom_sort_key(item):
     ''' Задает порядок сравнения элементов. '''
     return (-int(item[1]), int(item[2]), item[0])
