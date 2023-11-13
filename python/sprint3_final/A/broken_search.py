@@ -1,6 +1,9 @@
-# Номер посылки 96810272
+# Номер посылки 97114829
 
-def broken_search(nums, target) -> int:
+from typing import List
+
+
+def broken_search(nums: List[int], target: int) -> int:
     ''' Метод нахождения элемента в смещенном массиве. '''
     left = 0
     right = (len(nums) - 1)
